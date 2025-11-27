@@ -1,0 +1,266 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 5px;
+  padding-top: 15px;
+  text-align: center;
+  background-image: url(/assets/img/bg-1.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  box-sizing: content-box;
+}
+
+#gameCanvas {
+  border: 2px solid white;
+  border-style: groove;
+  border-radius: 5px;
+  box-shadow: 2px 2px 20px gold;
+}
+
+/* Main Container */
+#snk-container {
+  text-align: center;
+}
+
+/* Two Side Boxes */
+#snk-container .snk {
+  text-align: center;
+  align-items: center;
+  display: inline-block;
+  vertical-align: top;
+  gap: 5px;
+  width: 500px;
+  border-radius: 10px;
+}
+
+/* Image */
+#snake-img {
+  text-align: right;
+  width: 170px;
+  margin-bottom: 10px;
+  animation: slideInDown 2s ease forwards;
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h3 {
+  text-align: left;
+  margin-top: 20px;
+  font-size: 60px;
+  animation: slideInRight 2s ease forwards;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.imgh3 {
+  display: inline-block;
+  vertical-align: top;
+  width: 200px;
+}
+
+/* Start Button */
+.strtbt1 {
+  font-size: 18px;
+  background: white;
+  color: black;
+  /* border: none; */
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px 0;
+  width: 200px;
+  height: 40px;
+  transition: 1s;
+}
+
+#speedControl button:hover,
+.strtbt1:hover {
+  color: white;
+  background: darkgreen;
+  font-size: 15px;
+  border: 2px solid white;
+  box-shadow: 2px 2px 20px gold;
+}
+
+#pauseBtn {
+  font-size: 16px;
+  background: red;
+  border: 2px solid black;
+  color: white;
+  cursor: pointer;
+  margin-left: 160px;
+  padding: 13px 0;
+  width: 50px;
+  border-radius: 100%;
+  transition: 1s;
+}
+
+#pauseBtn:hover {
+  font-size: 16px;
+  color: white;
+  background: green;
+  border: 2px solid white;
+  box-shadow: 2px 2px 20px gold;
+}
+
+/* Direction Buttons */
+#controls {
+  margin-top: 10px;
+}
+
+#controls #PsRsm {
+  text-align: right;
+}
+
+.ctrl-btn {
+  width: 55px;
+  height: 55px;
+  font-size: 26px;
+  margin: 8px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 2px solid #333;
+  background: skyblue;
+  transition: 1s;
+}
+
+.ctrl-btn:hover {
+  color: aliceblue;
+  border: 2px solid white;
+  background-color: green;
+  box-shadow: 2px 2px 20px gold;
+}
+
+#speedControl {
+  margin: 30px;
+}
+
+#speedControl button {
+  font-size: 18px;
+  background: orange;
+  color: black;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 30px 10px;
+  width: 80px;
+  height: 40px;
+  transition: 1s;
+}
+
+#speedSlider {
+  width: 300px;
+  margin-top: 10px;
+}
+
+#speedLabel {
+  margin-top: 20px;
+}
+
+/* Score Box */
+#txtbox h2 {
+  margin-left: 120px;
+  font-size: 35px;
+  font-family: math;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+#txtbox input {
+  margin: 10px;
+  width: 100px;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  background: transparent;
+  border: none;
+  user-select: none;
+}
+
+#txtbox input::placeholder {
+  color: white;
+}
+
+/* Popup Background */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+/* Popup Box */
+.popup-box {
+  background: white;
+  width: 300px;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s;
+}
+
+.popup-box h2 {
+  color: #28a745;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.popup-box p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.popup-box button {
+  padding: 10px 25px;
+  border: none;
+  background: #28a745;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.popup-box button:hover {
+  background: #218838;
+}
+
+h5{
+  margin-top: 20px;
+  text-align: right;
+  font-size: 14px;
+  font-family: math;
+  font-weight: 500;
+  font-style: italic;
+}

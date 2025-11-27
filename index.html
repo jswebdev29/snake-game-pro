@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNAKE_GAME_PRO</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body onload="welcomeMessage()">
+
+    <div id="snk-container">
+
+        <!-- Game Canvas Box -->
+        <div class="snk">
+            <canvas id="gameCanvas" width="512" height="384px"></canvas>
+
+            <!-- Direction Controls -->
+            <div id="controls">
+                <div id="PsRsm">
+                    <button class="ctrl-btn" onclick="setDirection('up')">⮝</button>
+                    <button id="pauseBtn" onclick="pauseResumeGame()">
+                        <i class="fa-solid fa-pause"></i> <i class="fa-solid fa-play"></i></button>
+                </div>
+                <div>
+                    <button class="ctrl-btn" onclick="playClick(); setDirection('left')">⮜</button>
+                    <button class="ctrl-btn" onclick="playClick(); setDirection('down')">⮟</button>
+                    <button class="ctrl-btn" onclick="playClick(); setDirection('right')">⮞</button>
+                </div>
+            </div>
+            <div>
+                <p style="font-size: 25px; letter-spacing: 2px; word-spacing: 8px; font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;">Press <button class="strtbt1" onclick="playClick(); strtbt1this()">⮜ Start Game ⮞
+                        </Start></button>
+                    to play </p>
+            </div>
+        </div>
+
+        <!-- Right Side Panel -->
+        <div class="snk">
+            <div class="imgh3">
+                <img src="/assets/img/snake-cartoon-art--removebg-preview.png" alt="" id="snake-img">
+            </div>
+            <div class="imgh3">
+                <h3 id="head">Snake <br> Game</h3>
+            </div>
+
+            <div id="speedControl">
+                <div>
+                    <!-- Custom Slider -->
+                    <input type="range" id="speedSlider" min="50" max="300" value="150"
+                        oninput="sliderSpeed(this.value)">
+
+                    <p id="speedLabel" style="font-size:20px; font-weight:bold; color:white;">
+                        Current Speed: Normal (150ms)
+                    </p>
+                </div>
+                <!-- Speed Buttons -->
+                <button class="playClick(); strtbt" onclick="setSpeed(250, 'Slow')">Slow</button>
+                <button class="playClick(); strtbt" onclick="setSpeed(150, 'Normal')">Normal</button>
+                <button class="playClick(); strtbt" onclick="setSpeed(80, 'Fast')">Fast</button>
+            </div>
+
+            <div id="txtbox">
+                <h2>High Score:- <input type="text" id="scr2" placeholder="00" readonly><br>
+                    Score:- <input type="text" id="scr1" placeholder="00" readonly></h2>
+            </div>
+            <h5>FROM:- JASWINDER SINGH</h5>
+        </div>
+    </div>
+    <div>
+        <!-- 🔊 SOUND EFFECTS -->
+        <audio id="bgMusic" src="/assets/sounds/music_music.mp3" loop></audio>
+        <audio id="eatSound" src="/assets/sounds/music-food.mp3"></audio>
+        <audio id="gameOverSound" src="/assets/sounds/music-gameover.mp3"></audio>
+        <audio id="clickSound" src="/assets/sounds/music-moveclick.mp3"></audio>
+    </div>
+
+    <!-- java-script link file---------------------------------------------------- -->
+    <script src="/script.js"></script>
+
+
+</body>
+
+<!-- WELCOME POPUP -->
+<div id="welcomePopup" class="popup">
+    <div class="popup-box">
+        <h2>Welcome to Snake Game!</h2>
+        <p>Press <button onclick="closePopup()">OK</button> to play</p>
+    </div>
+</div>
+
+<!-- GAME OVER POPUP -->
+<div id="gameOverPopup" class="popup">
+    <div class="popup-box">
+        <h2 style="color:red;">Game Over!</h2>
+        <p>Your Score: <span id="finalScore"></span></p>
+        <p>High Score: <span id="finalHighScore"></span></p>
+        <button onclick="restartGame()" style="margin-top:10px;">Play Again</button>
+    </div>
+</div>
+
+</html>
