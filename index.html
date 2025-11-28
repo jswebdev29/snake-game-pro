@@ -22,19 +22,24 @@
             <!-- Direction Controls -->
             <div id="controls">
                 <div id="PsRsm">
-                    <button class="ctrl-btn" onclick="setDirection('up')">⮝</button>
+                    <button class="ctrl-btn" onclick="setDirection('up')">
+                        <i class="fa-solid fa-angle-up"></i></i></button>
                     <button id="pauseBtn" onclick="pauseResumeGame()">
                         <i class="fa-solid fa-pause"></i> <i class="fa-solid fa-play"></i></button>
                 </div>
                 <div>
-                    <button class="ctrl-btn" onclick="playClick(); setDirection('left')">⮜</button>
-                    <button class="ctrl-btn" onclick="playClick(); setDirection('down')">⮟</button>
-                    <button class="ctrl-btn" onclick="playClick(); setDirection('right')">⮞</button>
+                    <button class="ctrl-btn" onclick="playClick(); setDirection('left')">
+                        <i class="fa-solid fa-angle-left"></i></button>
+                    <button class="ctrl-btn" onclick="playClick(); setDirection('down')">
+                        <i class="fa-solid fa-angle-down"></i></button>
+                    <button class="ctrl-btn" onclick="playClick(); setDirection('right')">
+                        <i class="fa-solid fa-angle-right"></i></button>
                 </div>
             </div>
             <div>
                 <p style="font-size: 25px; letter-spacing: 2px; word-spacing: 8px; font-family: Arial, Helvetica, sans-serif;
-            font-weight: bold;">Press <button class="strtbt1" onclick="playClick(); strtbt1this()"> Start Game 
+            font-weight: bold; margin-top: 0px;">Press <button class="strtbt1" onclick="playClick(); strtbt1this()"><i
+                            class="fa-solid fa-caret-left"></i> Start Game <i class="fa-solid fa-caret-right"></i>
                         </Start></button>
                     to play </p>
             </div>
