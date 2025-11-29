@@ -6,7 +6,7 @@
 
 body {
   margin: 5px;
-  padding-top: 15px;
+  padding-top: 12px;
   text-align: center;
   background-image: url(/assets/img/bg-1.jpg);
   background-size: cover;
@@ -16,10 +16,8 @@ body {
 }
 
 #gameCanvas {
-  border: 2px solid white;
-  border-style: groove;
+  border: 2px solid aliceblue;
   border-radius: 5px;
-  box-shadow: 2px 2px 20px gold;
 }
 
 /* Main Container */
@@ -39,17 +37,23 @@ body {
 }
 
 /* Image */
+.imgh {
+  display: inline-block;
+  vertical-align: top;
+  width: 160px;
+}
+
 #snake-img {
   text-align: right;
   width: 170px;
   margin-bottom: 10px;
-  animation: slideInDown 2s ease forwards;
+  animation: slideInUp 2s ease forwards;
 }
 
-@keyframes slideInDown {
+@keyframes slideInUp {
   from {
     opacity: 0;
-    transform: translateY(-100px);
+    transform: translateY(100px);
   }
 
   to {
@@ -58,7 +62,7 @@ body {
   }
 }
 
-h3 {
+.imgh h3 {
   text-align: left;
   margin-top: 20px;
   font-size: 60px;
@@ -77,12 +81,6 @@ h3 {
   }
 }
 
-.imgh3 {
-  display: inline-block;
-  vertical-align: top;
-  width: 200px;
-}
-
 /* Start Button */
 .strtbt1 {
   font-size: 18px;
@@ -92,8 +90,8 @@ h3 {
   border-radius: 5px;
   cursor: pointer;
   margin: 20px 0;
-  width: 200px;
-  height: 40px;
+  width: 150px;
+  height: 35px;
   transition: 1s;
 }
 
@@ -106,13 +104,20 @@ h3 {
   box-shadow: 2px 2px 20px gold;
 }
 
+.strtpara p {
+  font-size: 25px;
+  letter-spacing: 2px;
+  word-spacing: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin-top: 0px;
+}
 #pauseBtn {
   font-size: 16px;
   background: red;
   border: 2px solid black;
   color: white;
   cursor: pointer;
-  margin-left: 160px;
   padding: 13px 0;
   width: 50px;
   border-radius: 100%;
@@ -127,24 +132,54 @@ h3 {
   box-shadow: 2px 2px 20px gold;
 }
 
-/* Direction Buttons */
+/* Direction Buttons ------------------------- */
 #controls {
-  margin-top: 10px;
+  margin-top: 15px;
+  text-align: center;
 }
 
-#controls #PsRsm {
-  text-align: right;
+#controls .sCtrl {
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.sCtrl .ctrl-btn {
+  margin-left: 65px;
+  margin-right: 165px;
+}
+
+/* Score Box */
+.sCtrl h2 {
+  font-size: 18px;
+  font-family: cursive;
+  text-align: left;
+}
+
+.sCtrl input {
+  width: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: transparent;
+  border: none;
+  user-select: none;
+}
+
+.sCtrl input::placeholder {
+  color: white;
 }
 
 .ctrl-btn {
-  width: 55px;
-  height: 55px;
-  font-size: 26px;
-  margin: 8px;
+  width: 58px;
+  height: 58px;
+  font-size: 28px;
+  margin: 10px;
+  margin-top: 2px;
   cursor: pointer;
   border-radius: 8px;
   border: 2px solid #333;
-  background: skyblue;
+  background: lightgray;
   transition: 1s;
 }
 
@@ -178,31 +213,6 @@ h3 {
 
 #speedLabel {
   margin-top: 20px;
-}
-
-/* Score Box */
-#txtbox h2 {
-  margin-left: 120px;
-  font-size: 35px;
-  font-family: math;
-  font-weight: bold;
-  letter-spacing: 2px;
-  text-align: left;
-}
-
-#txtbox input {
-  margin: 10px;
-  width: 100px;
-  font-size: 30px;
-  font-weight: bold;
-  color: white;
-  background: transparent;
-  border: none;
-  user-select: none;
-}
-
-#txtbox input::placeholder {
-  color: white;
 }
 
 /* Popup Background */
@@ -239,6 +249,8 @@ h3 {
 .popup-box p {
   font-size: 20px;
   font-weight: bold;
+  word-spacing: 5px;
+  margin-top: 20px;
 }
 
 .popup-box button {
@@ -249,17 +261,16 @@ h3 {
   font-size: 16px;
   border-radius: 8px;
   cursor: pointer;
-  transition: 1s;
 }
 
 .popup-box button:hover {
   background: #218838;
 }
 
-h5{
+h5 {
   margin-top: 20px;
   text-align: right;
-  font-size: 14px;
+  font-size: 16px;
   font-family: math;
   font-weight: 500;
   font-style: italic;
