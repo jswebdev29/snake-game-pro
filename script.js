@@ -1,4 +1,4 @@
-let clrs = ['black', 'gold']
+let clrs = ['black', 'lightgreen']
 let clrs2 = ['darkred', 'brown']
 let clrs3 = ['black', 'darkred']
 let clrs4 = ['rgb(156, 92, 92']
