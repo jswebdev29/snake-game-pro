@@ -21,12 +21,19 @@
 
             <!-- Direction Controls -->
             <div id="controls">
-                <div id="PsRsm">
+                <div class="sCtrl">
+                    <h2>High Score:- <input type="text" id="scr2" placeholder="00" readonly><br>
+                        Score:- <input type="text" id="scr1" placeholder="00" readonly></h2>
+                </div>
+                <div class="sCtrl">
                     <button class="ctrl-btn" onclick="setDirection('up')">
                         <i class="fa-solid fa-angle-up"></i></i></button>
+                </div>
+                <div class="sCtrl">
                     <button id="pauseBtn" onclick="pauseResumeGame()">
                         <i class="fa-solid fa-pause"></i> <i class="fa-solid fa-play"></i></button>
                 </div>
+
                 <div>
                     <button class="ctrl-btn" onclick="playClick(); setDirection('left')">
                         <i class="fa-solid fa-angle-left"></i></button>
@@ -35,25 +42,18 @@
                     <button class="ctrl-btn" onclick="playClick(); setDirection('right')">
                         <i class="fa-solid fa-angle-right"></i></button>
                 </div>
-            </div>
-            <div>
-                <p style="font-size: 25px; letter-spacing: 2px; word-spacing: 8px; font-family: Arial, Helvetica, sans-serif;
-            font-weight: bold; margin-top: 0px;">Press <button class="strtbt1" onclick="playClick(); strtbt1this()"><i
-                            class="fa-solid fa-caret-left"></i> Start Game <i class="fa-solid fa-caret-right"></i>
-                        </Start></button>
-                    to play </p>
+
+                <div class="strtpara">
+                    <p>Press <button class="strtbt1" onclick="playClick(); strtbt1this()"><i
+                                class="fa-solid fa-caret-left"></i> Start Game <i class="fa-solid fa-caret-right"></i>
+                            </Start></button> to play </p>
+                </div>
+
             </div>
         </div>
 
         <!-- Right Side Panel -->
         <div class="snk">
-            <div class="imgh3">
-                <img src="/assets/img/snake-cartoon-art--removebg-preview.png" alt="" id="snake-img">
-            </div>
-            <div class="imgh3">
-                <h3 id="head">Snake <br> Game</h3>
-            </div>
-
             <div id="speedControl">
                 <div>
                     <!-- Custom Slider -->
@@ -70,13 +70,18 @@
                 <button class="playClick(); strtbt" onclick="setSpeed(80, 'Fast')">Fast</button>
             </div>
 
-            <div id="txtbox">
-                <h2>High Score:- <input type="text" id="scr2" placeholder="00" readonly><br>
-                    Score:- <input type="text" id="scr1" placeholder="00" readonly></h2>
+            <div class="imgh">
+                <img src="/assets/img/snake-cartoon-art--removebg-preview.png" alt="" id="snake-img">
             </div>
+            <div class="imgh">
+                <h3 id="head">Snake <br> Game</h3>
+            </div>
+
             <h5>FROM:- JASWINDER SINGH</h5>
         </div>
+
     </div>
+
     <div>
         <!-- 🔊 SOUND EFFECTS -->
         <audio id="bgMusic" src="/assets/sounds/music_music.mp3" loop></audio>
@@ -95,6 +100,7 @@
 <div id="welcomePopup" class="popup">
     <div class="popup-box">
         <h2>Welcome to Snake Game!</h2>
+        <img src="/assets/img/snake-cartoon-art--removebg-preview.png" alt="" id="" width="150">
         <p>Press <button onclick="closePopup()">OK</button> to play</p>
     </div>
 </div>
