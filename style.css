@@ -57,7 +57,7 @@ body {
 .imgh {
   display: inline-block;
   vertical-align: top;
-  width: 160px;
+  width: 170px;
 }
 
 #snake-img {
@@ -209,7 +209,7 @@ body {
 }
 
 #speedControl {
-  margin: 30px;
+  margin: 32px;
 }
 
 #speedControl button {
@@ -218,7 +218,7 @@ body {
   color: black;
   border-radius: 8px;
   cursor: pointer;
-  margin: 30px 10px;
+  margin: 30px 20px;
   width: 80px;
   height: 40px;
   transition: 1s;
@@ -228,7 +228,7 @@ body {
   background-color: #42cc48;
   border-radius: 5px;
   width: 360px;
-  margin: 0px 50px;
+  margin: 0px 40px;
   box-shadow: 2px 2px 10px rgb(44, 136, 1);
 }
 #speedSlider {
@@ -237,7 +237,12 @@ body {
 }
 
 #speedLabel {
-  margin-top: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  word-spacing: 6px;
+  letter-spacing: 1px;
+  margin-top: 40px;
 }
 
 /* Popup Background */
