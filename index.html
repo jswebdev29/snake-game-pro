@@ -17,7 +17,7 @@
 
         <!-- Game Canvas Box -->
         <div class="snk">
-            <canvas id="gameCanvas" width="512" height="384px"></canvas>
+            <canvas id="gameCanvas" width="512" height="400px"></canvas>
 
             <!-- Direction Controls -->
             <div id="controls">
@@ -43,27 +43,27 @@
                         <i class="fa-solid fa-angle-right"></i></button>
                 </div>
 
-                <div class="strtpara">
-                    <p>Press <button class="strtbt1" onclick="playClick(); strtbt1this()"><i
-                                class="fa-solid fa-caret-left"></i> Start Game <i class="fa-solid fa-caret-right"></i>
-                            </Start></button> to play </p>
-                </div>
-
             </div>
         </div>
 
         <!-- Right Side Panel -->
         <div class="snk">
+            <div class="strtpara">
+                <p>Press <button class="strtbt1" onclick="playClick(); strtbt1this()"><i
+                            class="fa-solid fa-caret-left"></i> Start Game <i class="fa-solid fa-caret-right"></i>
+                        </Start></button> to play </p>
+            </div>
             <div id="speedControl">
-                <div>
+                <div class="rangeslide">
                     <!-- Custom Slider -->
                     <input type="range" id="speedSlider" min="50" max="300" value="150"
                         oninput="sliderSpeed(this.value)">
-
-                    <p id="speedLabel" style="font-size:20px; font-weight:bold; color:white;">
-                        Current Speed: Normal (150ms)
-                    </p>
                 </div>
+
+                <p id="speedLabel" style="font-size:20px; font-weight:bold; color:white;">
+                    Current Speed: Normal (150ms)
+                </p>
+
                 <!-- Speed Buttons -->
                 <button class="playClick(); strtbt" onclick="setSpeed(250, 'Slow')">Slow</button>
                 <button class="playClick(); strtbt" onclick="setSpeed(150, 'Normal')">Normal</button>
